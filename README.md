@@ -1,2 +1,1 @@
-# GreatBayProgrammingClub.github.io
-GBCC Programming Club Email Subscription 
+Programming Club temporary email sign up page

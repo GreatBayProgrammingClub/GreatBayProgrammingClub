@@ -1,0 +1,154 @@
+/*
+CSS Reset
+*/
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+
+/*
+Typography
+*/
+html{font-size:1em}
+body{
+  background-color:#fff;
+  font-family:'Open Sans', sans-serif,serif;
+  font-weight:400;
+  line-height:1.45;
+  color:grey}
+  p{margin-bottom:1.3em}
+  h1,h2,h3,h4{
+    margin:1.414em 0 .5em;
+    font-weight:inherit;
+    line-height:1.2;
+    font-family: 'Roboto Mono','Open Sans',monospace;}
+    h1{margin-top:0;font-size:3.998em}
+    h2{font-size:2.827em}
+    h3{font-size:1.999em}
+    h4{font-size:1.414em}
+    small{font-size:.707em}
+
+
+    /*
+    Styles
+    -------------------------------------------------------
+    */
+
+    /* Hero */
+    .hero {
+      background-color: #f1f1f1;
+      color: #566270;
+      height:100vh;
+    }
+    .hero .wrapper {
+      width: 85%;
+      margin: 0 auto;
+    }
+    .gbcc_text {
+      border-top: 10px solid orange;
+      display: inline-block;
+      padding-top: 10px;
+      margin-bottom: 45px;
+    }
+    .gbcc_text a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .gbcc_text a:hover{
+      color: black;
+    }
+    .hero h1 {
+      font-size: 2.5em;
+      font-family: 'Roboto Mono';
+    }
+    .hero p {
+      font-size: 18px;
+      font-weight: lighter;
+    }
+
+    /* Idle cursor*/
+    @keyframes blink {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    p:after {
+      position: absolute;
+      content: "_";
+      font-weight: 500;
+      color: white;
+      animation-name: blink;
+      animation-duration: .9s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease;
+    }
+
+    /* Email Sign Up */
+    .signup {
+      height: 100vh;
+    }
+    form h2 {
+      font-size: 2.5em;
+      font-family: 'Roboto Mono';
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    form h6 {
+      margin-top: 0;
+      color: lightgrey;
+      font-weight: lighter;
+    }
+    .asterisk {
+      color: orange;
+    }
+    .btn {
+      display: inline;
+    }
+    #mc-embedded-subscribe {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+
+    /*
+    Grid
+    -------------------------------------------------------
+    */
+    * {
+      box-sizing: border-box;
+    }
+    .row::after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+    [class*="col-"] {
+      float: left;
+      padding: 15px;
+    }
+    /* For desktop: */
+    .col-half {width: 50%;}
+    .col-full {width: 100%;}
+    @media only screen and (max-width: 768px) {
+      /* For mobile phones: */
+      [class*="col-"] {
+        width: 100%;
+      }
+      form h2 {
+        font-size: 1.5em;
+      }
+      .hero h1 {
+        font-size: 2em;
+      }
+      .hero p {
+        font-size: 14px;
+      }
+    }
